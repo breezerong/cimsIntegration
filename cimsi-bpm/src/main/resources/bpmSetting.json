@@ -1,0 +1,4 @@
+{
+  "BPMBaseURL": "http://127.0.0.1:8082/workflow/horizon/workflow/rest/",
+  "Suffix":".wf"
+}
