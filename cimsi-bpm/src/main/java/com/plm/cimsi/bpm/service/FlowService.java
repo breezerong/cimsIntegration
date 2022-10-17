@@ -41,6 +41,8 @@ public class FlowService extends BPMServiceBase implements IFlowService {
                     jsObj.put("recordsTotal",jsonResult.get("recordsTotal"));
                     return getSuccessResult(jsObj.toJSONString());
                 }
+            }else if(jsonResult.containsKey("message")){
+                return getErrorResult(1099,"提交信息失败,"+jsonResult.getString("message"));
             }
         }
         return getErrorResult(1099,"提交信息失败,"+httpPost.getURI().getPath());
